@@ -10,52 +10,91 @@ body {
 
 .octocat {
   display: inline-block;
+  margin: 0px 10px;
+}
+
+.octocat > a {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border: solid 1px lightgray;
+  border-radius: 3px;
+  position: relative;
+}
+
+.octocat > a::after {
+  content: "";
+  border-top: solid 10px lightgray;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+  position: absolute;
+  top: 100%;
+  right: 1%;
 }
 
 .octodex {
   padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+img {
+  width: 100%;
 }
 
 .octodex img {
-  border: solid lightgrey 1px;
-  border-radius: 5px;
-  height: 325px;
-  width: 30vw;
+  /* border: solid lightgrey 1px;
+  border-radius: 5px; */
+  height: 400px;
+  width: 28vw;
   margin-right: 15px;
   margin-left: 15px;
   margin-bottom: 0px;
-  float: none;
+  /* float: none; */
   top: 0px;
 }
 
 .image-footer img {
   height: 30px;
   width: 30px;
-  float: right;
+  border-radius: 3px;
+  top: 50%;
+  /* transform: translateY(-50%); */
+  right: 0%;
+  margin: 0px;
 }
 
 .image-footer {
   position: relative;
-  top: 20px;
+  /* top: 20px;
   bottom: 20px;
-  left: 40px;
-  right: 12px;
   max-width: inherit;
-  width: 80%;
+  width: 100%;
   height: 40px;
-  padding: 20px;
-  border-bottom: solid;
-  margin: 0 auto;
+  padding: 20px; */
+  padding: 12px 0px;
+  border-bottom: solid lightgray;
+  /* margin: 0 auto; */
 }
 
 .image-number {
   color: lightgray;
   font-weight: bold;
-  float: left;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0%;
+}
+
+.image-number::before {
+  content: "#";
 }
 
 .image-caption {
-  float: right;
+  /* float: right; */
+  font-family: Arial;
+  color: gray;
+  font-weight: bold;
+  text-align: right;
 }
 
 .image-caption a {
@@ -65,5 +104,15 @@ body {
 }
 
 .authors {
-  float: inherit;
+  /* float: inherit; */
+  /* padding-left: 5px; */
+  display: inline-block;
+}
+
+.authors img {
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
 }
